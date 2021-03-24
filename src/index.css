@@ -1,0 +1,20 @@
+@font-face {
+    /* src: url(/fonts/OpenSans.ttf) format('opentype'); */
+    /* font-family: 'openSans'; */
+
+  }
+
+body {
+  margin: 0;
+  /* font-family:openSans ; */
+  background:#F7F3F5;
+}
+* {
+  outline:none!important;
+}
+
+div,p,h1,h2,h3,h4,h5,h6 {
+  margin:0;
+  padding:0;
+  
+}

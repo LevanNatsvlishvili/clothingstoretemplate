@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="40" viewBox="0 0 148 40">
+  <g id="logo_area" data-name="logo area" transform="translate(-19 -28)">
+    <g id="Rectangle_9" data-name="Rectangle 9" transform="translate(19 28)" fill="none" stroke="#707070" stroke-width="1">
+      <rect width="148" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="147" height="39" fill="none"/>
+    </g>
+    <text id="LOGO" transform="translate(64 55.474)" fill="#707070" font-size="20" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">LOGO</tspan></text>
+  </g>
+</svg>
