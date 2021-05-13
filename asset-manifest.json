@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://levannatsvlishvili.github.io/clothingstoretemplate/static/css/main.1d818030.chunk.css",
-    "main.js": "https://levannatsvlishvili.github.io/clothingstoretemplate/static/js/main.016eca86.chunk.js",
-    "main.js.map": "https://levannatsvlishvili.github.io/clothingstoretemplate/static/js/main.016eca86.chunk.js.map",
+    "main.js": "https://levannatsvlishvili.github.io/clothingstoretemplate/static/js/main.965b4b3f.chunk.js",
+    "main.js.map": "https://levannatsvlishvili.github.io/clothingstoretemplate/static/js/main.965b4b3f.chunk.js.map",
     "runtime-main.js": "https://levannatsvlishvili.github.io/clothingstoretemplate/static/js/runtime-main.eeae5a2e.js",
     "runtime-main.js.map": "https://levannatsvlishvili.github.io/clothingstoretemplate/static/js/runtime-main.eeae5a2e.js.map",
     "static/css/2.c8f8ce74.chunk.css": "https://levannatsvlishvili.github.io/clothingstoretemplate/static/css/2.c8f8ce74.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.c8f8ce74.chunk.css",
     "static/js/2.66b5cea7.chunk.js",
     "static/css/main.1d818030.chunk.css",
-    "static/js/main.016eca86.chunk.js"
+    "static/js/main.965b4b3f.chunk.js"
   ]
 }
