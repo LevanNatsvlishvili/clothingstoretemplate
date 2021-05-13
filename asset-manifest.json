@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/clothingstoretemplate/static/css/main.1d818030.chunk.css",
+    "main.js": "/clothingstoretemplate/static/js/main.4214e18d.chunk.js",
+    "main.js.map": "/clothingstoretemplate/static/js/main.4214e18d.chunk.js.map",
+    "runtime-main.js": "/clothingstoretemplate/static/js/runtime-main.c42bbbdf.js",
+    "runtime-main.js.map": "/clothingstoretemplate/static/js/runtime-main.c42bbbdf.js.map",
+    "static/css/2.ec5f3321.chunk.css": "/clothingstoretemplate/static/css/2.ec5f3321.chunk.css",
+    "static/js/2.aaa461fd.chunk.js": "/clothingstoretemplate/static/js/2.aaa461fd.chunk.js",
+    "static/js/2.aaa461fd.chunk.js.map": "/clothingstoretemplate/static/js/2.aaa461fd.chunk.js.map",
+    "index.html": "/clothingstoretemplate/index.html",
+    "static/css/2.ec5f3321.chunk.css.map": "/clothingstoretemplate/static/css/2.ec5f3321.chunk.css.map",
+    "static/css/main.1d818030.chunk.css.map": "/clothingstoretemplate/static/css/main.1d818030.chunk.css.map",
+    "static/js/2.aaa461fd.chunk.js.LICENSE.txt": "/clothingstoretemplate/static/js/2.aaa461fd.chunk.js.LICENSE.txt",
+    "static/media/slick-theme.css": "/clothingstoretemplate/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c42bbbdf.js",
+    "static/css/2.ec5f3321.chunk.css",
+    "static/js/2.aaa461fd.chunk.js",
+    "static/css/main.1d818030.chunk.css",
+    "static/js/main.4214e18d.chunk.js"
+  ]
+}
