@@ -6,22 +6,22 @@ const FooterLinks = () => {
       <div className='p-1 d-flex justify-content-center' xs={3}>
         <SocialLink
           linkAdress='www.google.com'
-          icon='/icons/socialMedia/instagram.svg' />
+          icon={`${process.env.PUBLIC_URL}/icons/socialMedia/instagram.svg`} />
       </div>
       <div className='p-1 d-flex justify-content-center' xs={3}>
         <SocialLink
           linkAdress='www.facebook.com'
-          icon='/icons/socialMedia/facebook.svg' />
+          icon={`${process.env.PUBLIC_URL}/icons/socialMedia/facebook.svg`} />
       </div>
       <div className='p-1 d-flex justify-content-center' xs={3}>
         <SocialLink
           linkAdress='www.pinterest.com'
-          icon='/icons/socialMedia/pinterest.svg' />
+          icon={`${process.env.PUBLIC_URL}/icons/socialMedia/pinterest.svg`} />
       </div>
       <div className='p-1 d-flex justify-content-center' xs={3}>
         <SocialLink
           linkAdress='www.youtube.com'
-          icon='/icons/socialMedia/youtube.svg' />
+          icon={`${process.env.PUBLIC_URL}/icons/socialMedia/youtube.svg`} />
       </div>
     </div>
 

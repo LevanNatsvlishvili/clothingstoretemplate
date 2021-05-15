@@ -31,9 +31,7 @@ const Login = () => {
           <Checkbox label='Remember Me!' />
           <Link className={classes.forgotPassword}>Forgot your password?</Link>
         </div>
-        <ButtonBlock type='submit'>
-          Submit
-        </ButtonBlock>
+        <ButtonBlock text='Login' type='submit' />
       </form>
     </Container>
   )

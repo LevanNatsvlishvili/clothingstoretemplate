@@ -4,6 +4,7 @@ export default ({
     black: '#403234!important',
     grey: '#707070!important',
     cream: '#e7e7e7!important',
+    orange: '#FFC107!important',
     darkGrey: '#687774!important',
     transparent: 'transparent!important',
   },

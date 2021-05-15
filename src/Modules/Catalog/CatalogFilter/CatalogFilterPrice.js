@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import RangeSlider from 'Components/RangeSlider/RangeSlider';
 import clsx from 'clsx';
+import UseStore from 'Store/StoreContext';
 
 
 const CatalogFilterPrice = () => {
   const classes = useStyles();
-  const [valueMin, setValueMin] = useState(50);
-  const [valueMax, setValueMax] = useState(1500);
+  const { valueMin, setValueMin, valueMax, setValueMax } = UseStore();
 
   const handleChange = (value) => {
     setValueMin(value[0])
     setValueMax(value[1])
   }
-  const min = 50;//minimum value of price
-  const max = 1500;//maximum value of price
+  const min = 5;//minimum value of price
+  const max = 150;//maximum value of price
 
   return (
     <div className='mt-2 mb-3'>

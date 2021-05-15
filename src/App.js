@@ -4,22 +4,21 @@ import { theme } from 'common/@mui';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import { ThemeProvider } from '@material-ui/styles';
-import Header from 'Layout/Header/Header';
 import Layout from 'Layout';
 import { RenderRoutes } from 'Routes';
-import Modules from 'Modules/Modules';
-import { Switch, Route } from 'react-router-dom';
+import { StoreContextProvider } from 'Store/StoreContext';
 
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Layout>
-          <RenderRoutes />
-          <Modules />
-        </Layout>
-      </Router>
+      <StoreContextProvider>
+        <Router>
+          <Layout>
+            <RenderRoutes />
+          </Layout>
+        </Router>
+      </StoreContextProvider>
     </ThemeProvider >
 
   );

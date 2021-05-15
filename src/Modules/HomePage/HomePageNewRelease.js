@@ -6,7 +6,7 @@ import ProductCarousel from 'Components/Carousel/ProductCarousel';
 const HomePageNewRelease = () => {
   return (
     <Container className='mt-5' >
-      <ProductCarousel products={productArray} />
+      <ProductCarousel heading='New Arrivals' products={productArray} />
 
     </Container>
   )

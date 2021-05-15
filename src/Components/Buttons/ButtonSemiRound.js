@@ -4,11 +4,13 @@ import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 
 
-const ButtonRound = (props) => {
+const ButtonSemiRound = (props) => {
   const classes = useStyles({
     backgroundColor: props.background,
     color: props.color,
-    size: props.size
+    size: props.size,
+    fontWeight: props.fontWeight,
+
   });
   const { text, address, ...rest } = props;
   return (
@@ -38,11 +40,12 @@ const useStyles = makeStyles((theme) => ({
     width: 'fit-content',
     fontSize: '18px',
     minWidth: 140,
-    color: theme.colors.black,
-    fontWeight: 700,
+    color: props => theme.colors[props.color || 'black'],
+    fontWeight: props => props.fontWeight || 700,
     display: 'flex',
     border: 'none',
     margin: '4px',
+    padding: '6px 16px',
     boxShadow: 'none!important',
     textDecoration: 'none!important',
     '&:hover': {
@@ -58,4 +61,4 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default ButtonRound;
+export default ButtonSemiRound;

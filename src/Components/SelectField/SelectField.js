@@ -1,12 +1,6 @@
-import React, { useState, ElementConfig } from 'react';
-import { makeStyles } from '@material-ui/styles';
+import React from 'react';
 import Select, { components } from 'react-select';
 
-const options = [
-  { value: 'newest', label: 'Newest' },
-  { value: 'highToLow', label: 'Price: High to Low' },
-  { value: 'lowToHigh', label: 'Price: Low to High' },
-];
 
 const customStyles = (value) => ({
   option: (provided, state) => ({
@@ -46,7 +40,7 @@ const customStyles = (value) => ({
 })
 
 const SearchField = (props) => {
-  const { value, handleChange, ...rest } = props;
+  const { value, handleChange, options, ...rest } = props;
   return (
     <Select
       value={value}
@@ -55,6 +49,7 @@ const SearchField = (props) => {
       components={{ DropdownIndicator }}
       isSearchable={false}
       options={options}
+      placeholder='Sort By'
       {...rest}
     />
   )
@@ -63,7 +58,7 @@ const SearchField = (props) => {
 const DropdownIndicator = (props) => {
   return (
     <components.DropdownIndicator {...props}>
-      <img src='/icons/arrow/arrow.svg' alt='chevron' />
+      <img src={`${process.env.PUBLIC_URL}/icons/arrow/arrow.svg`} alt='chevron' />
     </components.DropdownIndicator>
   );
 };

@@ -9,14 +9,14 @@ const ButtonBlock = (props) => {
     color: props.color,
     height: props.height
   });
-  const { icon, children, ...rest } = props;
+  const { icon, children, text, ...rest } = props;
   return (
     <Button
       className={clsx(classes.button, {
         'w-100 border-0 align-items-center justify-content-center d-flex': true,
       })}
       {...rest}>
-      {children}
+      {text}
     </Button>
   )
 }

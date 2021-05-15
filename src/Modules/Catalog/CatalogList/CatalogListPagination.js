@@ -7,10 +7,11 @@ const CatalogList = (props) => {
   const classes = useStyles();
   const { numberOfPages } = props;
 
+  let PageNum = Math.ceil(numberOfPages / 12);
+
   const pages = [];
-  for (let i = 1; i <= numberOfPages; i++) {
+  for (let i = 1; i <= PageNum; i++) {
     pages.push(i);
-    console.log(pages)
   }
   return (
     <Pagination className='d-flex justify-content-center'>

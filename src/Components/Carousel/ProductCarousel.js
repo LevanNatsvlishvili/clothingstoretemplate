@@ -10,7 +10,7 @@ import getWindowDimensions from "Utils/getWindowDimensions";
 const ProductCarousel = (props) => {
   const classes = useStyles();
   const { width } = getWindowDimensions();
-  const { heading, viewMoreAdress } = props;
+  const { heading, viewMoreAdress, products } = props;
   const settings = {
     dots: false,
     infinite: true,
@@ -27,7 +27,6 @@ const ProductCarousel = (props) => {
     slidesToShow = 4;
   }
 
-  const { products } = props;
   return (
     <div>
       <div className='d-flex mb-2'>
@@ -42,7 +41,7 @@ const ProductCarousel = (props) => {
         {products.map((product, index) => (
           <Link key={index} to={product.address}>
             <div className={classes.product}>
-              <img src={product.img} alt='product' />
+              <img src={process.env.PUBLIC_URL + product.img} alt='product' />
             </div>
           </Link>
         ))}
@@ -91,7 +90,8 @@ const useStyles = makeStyles((theme) => ({
   },
   headingText: {
     fontSize: '22px',
-    fontWeight: '500'
+    fontWeight: '500',
+    color: theme.colors.black
   },
   viewMore: {
     color: theme.colors.darkGrey,

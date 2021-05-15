@@ -1,31 +1,29 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import ProductInList from 'Components/ProductInList';
 import CartCheckout from './CartCheckout';
+import UseStore from 'Store/StoreContext';
 
-
-const Catalog = () => {
-  const classes = useStyles();
+const Cart = () => {
+  const { cart } = UseStore()
   return (
-    <Container fluid='lg' >
-      <Row className='mt-3'>
+    <Container fluid >
+      <Row className='mt-3 '>
         <Col className='mb-3' xs={12}>
           <h2>Shopping Cart</h2>
         </Col>
-        <Col className='mb-3' xs={8}>
-          <ul className='text-decoration-none'>
-            <li>
-              <ProductInList />
-            </li>
-            <li>
-              <ProductInList />
-            </li>
+      </Row>
+      <Row className='mt-3 cart'>
+        <Col className='mb-3' xs={12} md={8}>
+          <ul class="list-group">
+            <li class="list-group-item p-0 mb-3 border-0 "><ProductInList /></li>
+            <li class="list-group-item p-0 mb-3 border-0 "><ProductInList /></li>
+            <li class="list-group-item p-0 mb-3 border-0 "><ProductInList /></li>
           </ul>
         </Col>
-        <Col className='mb-3' xs={4}>
+        <Col className='mb-3' xs={12} md={4}>
           <CartCheckout />
         </Col>
       </Row>
@@ -34,9 +32,4 @@ const Catalog = () => {
   )
 }
 
-
-const useStyles = makeStyles((theme) => ({
-
-}));
-
-export default Catalog;
+export default Cart;

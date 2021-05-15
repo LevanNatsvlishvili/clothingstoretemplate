@@ -6,17 +6,17 @@ import 'swiper/swiper-bundle.css';
 
 const ProductViewer = (props) => {
   const classes = useStyles();
-  const images = [
-    {
-      original: '/images/Product/adidas2.jpg',
-      thumbnail: '/images/Product/adidas2.jpg',
-    },
-    {
-      original: '/images/Product/adidas2.jpg',
-      thumbnail: '/images/Product/adidas2.jpg',
-    },
-  ];
+  const { imgArray } = props;
+  const images = [];
 
+  if (imgArray) {
+    imgArray.map((img, index) => {
+      images.push({
+        original: `${process.env.PUBLIC_URL}/images/product/${img}`,
+        thumbnail: `${process.env.PUBLIC_URL}/images/product/${img}`,
+      })
+    })
+  }
 
   return <ImageGallery
     items={images}
@@ -37,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
     },
     '& .image-gallery-image': {
       objectFit: 'cover'
+    },
+    '& .image-gallery-slides img': {
+      height: 500
     },
   },
 }));

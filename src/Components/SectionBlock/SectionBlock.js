@@ -12,7 +12,7 @@ const SectionBlock = (props) => {
       <div className={clsx(classes.root, {
         'd-flex align-items-center justify-content-center': true
       })}>
-        <img src={img} alt='section' />
+        <img src={process.env.PUBLIC_URL + img} alt='section' />
         <h6>{text}</h6>
       </div>
     </Link>

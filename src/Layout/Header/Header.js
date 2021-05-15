@@ -9,9 +9,13 @@ import SearchField from 'Components/SearchField/SearchField';
 import IconText from 'Components/IconText';
 import NavLink from '../Components/NavLink';
 import clsx from 'clsx';
+import UseStore from 'Store/StoreContext';
+import { withRouter } from 'react-router-dom';
 
 const Header = () => {
   const classes = useStyles();
+
+  const { cart } = UseStore();
   return (
     <Navbar className={classes.root} bg="light" expand="lg">
       <Container className='p-0' fluid='fluid'>
@@ -22,8 +26,8 @@ const Header = () => {
             justify-content-xl-start 
             justify-content-center 
             d-flex' xs={12} lg={3}>
-              <Navbar.Brand href="/">
-                <img src='/icons/logo/logo.svg' />
+              <Navbar.Brand href="/clothingstoretemplate/">
+                <img src={`${process.env.PUBLIC_URL}/icons/logo/logo.svg`} />
               </Navbar.Brand>
             </Col>
             <Col className='align-items-center d-flex' xs={12} lg={6}>
@@ -37,12 +41,14 @@ const Header = () => {
             flex-xl-row
             flex-lg-row
             d-flex' xs={12} lg={3}>
-              <Nav.Link href="/auth">
+              <Nav.Link href="/clothingstoretemplate/auth">
+              </Nav.Link>
+              <NavLink linkAdress='/auth' >
                 <IconText icon='/icons/user/userGrey.svg' text='Login / Register' />
-              </Nav.Link>
-              <Nav.Link href="/cart">
-                <IconText icon='/icons/cart/cartGrey.svg' text='Cart' />
-              </Nav.Link>
+              </NavLink>
+              <NavLink linkAdress='/cart' >
+                <IconText cart={cart.length} icon='/icons/cart/cartGrey.svg' text='Cart' />
+              </NavLink>
             </Col>
 
           </Row>
@@ -58,10 +64,18 @@ const Header = () => {
         justify-content-md-center 
         justify-content-sm-center 
         justify-content-start w-100'>
-          <NavLink name='Men' linkAdress='/Men' />
-          <NavLink name='Women' linkAdress='/Men' />
-          <NavLink name='Kids' linkAdress='/Men' />
-          <NavLink name='Sale' linkAdress='/Men' />
+          <NavLink linkAdress='/Men' >
+            Men
+          </NavLink>
+          <NavLink linkAdress='/Women' >
+            Women
+          </NavLink>
+          <NavLink linkAdress='/Kids' >
+            Kids
+          </NavLink>
+          <NavLink linkAdress='/Sale' >
+            Sale
+          </NavLink>
           <Navbar.Toggle className={clsx(classes.toggleButton, {
             'position-absolute ': true
           })} aria-controls="basic-navbar-nav" />
@@ -93,4 +107,4 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default Header;
+export default withRouter(Header);

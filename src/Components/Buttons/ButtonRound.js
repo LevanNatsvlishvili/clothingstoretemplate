@@ -7,14 +7,14 @@ const ButtonRound = (props) => {
     background: props.background,
     size: props.size
   });
-  console.log(props.background)
+
   const { icon, ...rest } = props;
   return (
     <Button
       className={classes.button}
       variant="outline-secondary"
       {...rest}>
-      <img src={icon} alt='Search' />
+      <img src={process.env.PUBLIC_URL + icon} alt='Search' />
     </Button>
   )
 }

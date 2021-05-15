@@ -1,24 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import SelectField from 'Components/SelectField';
 
-const CatalogListSortBy = () => {
+const CatalogListSortBy = (props) => {
   const classes = useStyles();
-  const [value, setValue] = useState();
+  const { handleSort, value } = props;
 
-  const handleChange = (value) => {
-    setValue(value);
-  };
   return (
     <div className={classes.sortBy}>
       <SelectField
+        options={options}
         value={value}
-        handleChange={handleChange} />
+        defaultValue='newest'
+        handleChange={handleSort} />
     </div>
 
   )
 }
 
+const options = [
+  { value: 'newest', label: 'Newest' },
+  { value: 'desc', label: 'Price: High to Low' },
+  { value: 'asc', label: 'Price: Low to High' },
+];
 
 const useStyles = makeStyles((theme) => ({
   sortBy: {

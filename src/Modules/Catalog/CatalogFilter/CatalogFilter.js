@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { Link } from 'react-router-dom';
 import Divider from '../Components/Divider';
 import CatalogFilterDepartment from './CatalogFilterDepartment';
 import CatalogFilterColors from './CatalogFilterColors';
@@ -14,7 +13,7 @@ const CatalogFilter = () => {
     <div className={classes.filterContainer}>
       <CatalogFilterDepartment clothingTypes={clothingTypes} />
       <Divider />
-      <CatalogFilterColors colors={colors} />
+      <CatalogFilterColors />
       <Divider />
       <CatalogFilterPrice />
       <Divider />
@@ -23,8 +22,16 @@ const CatalogFilter = () => {
   )
 }
 
-const clothingTypes = ['Hoodies & Sweatshirts', 'Pants', 'Shirts', 'Shoes', 'Accessories']
-const colors = ['black', 'white', 'red', 'blue', 'yellow', 'black', 'white', 'red', 'blue', 'yellow']
+const clothingTypes = [
+  { name: 'Hoodies & Sweatshirts', value: 'hoodies&sweatshirts' },
+  { name: 'Pants', value: 'pants' },
+  { name: 'Shirts', value: 'shirts' },
+  { name: 'Tops&Tees', value: 'tops&tees' },
+  { name: 'Jackets&Coats', value: 'jackets&coats' },
+  { name: 'Shoes', value: 'shoes' },
+  { name: 'Accessories', value: 'accessories' },
+]
+
 const sizes = [41, 42, 43, 44, 45, 46, 47, 48]
 
 const useStyles = makeStyles((theme) => ({

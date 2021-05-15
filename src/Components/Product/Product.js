@@ -1,20 +1,24 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
+import Url from 'Paths';
 
 const Product = (props) => {
   const classes = useStyles();
-  const { img, price, name } = props;
+  const { img, price, name, link } = props;
   return (
-    <div className={clsx(classes.product, {
-      'w-100 h-100 ': true
-    })}>
-      <img className='w-100 border-rounded' src={img} alt="product img" />
+    <Link
+      to={`${Url.HOME}/product${link}`}
+      className={clsx(classes.product, {
+        'w-100 h-100 ': true
+      })}>
+      <img className='w-100 border-rounded' src={`${process.env.PUBLIC_URL}/images/product/${img}`} alt="product img" />
       <div className={classes.textContainer}>
         <h5 className='mt-1'>{name}</h5>
         <h6 className='mt-2'>{price}$</h6>
       </div>
-    </div>
+    </Link>
   )
 }
 
@@ -23,7 +27,11 @@ const useStyles = makeStyles((theme) => ({
   product: {
     height: 200,
     '& img': {
-      borderRadius: '6px'
+      borderRadius: '6px',
+      height: '250px',
+    },
+    '&:hover': {
+      textDecoration: 'none'
     }
   },
   textContainer: {

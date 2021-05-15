@@ -2,17 +2,18 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import ButtonSemiRound from 'Components/Buttons/ButtonSemiRound';
 import clsx from 'clsx';
+import Url from 'Paths';
 
 const HomePageBanner = () => {
   const classes = useStyles();
   return (
     <div className={classes.banner}>
-      <img src="/images/homepage/banner.png" alt="" />
+      <img src={`${process.env.PUBLIC_URL}/images/homepage/banner.png`} alt="" />
       <div className={clsx(classes.moreButton, {
         'd-flex align-items-center flex-column': true
       })}>
         <h1 className='mb-3'>Up to 50% Off on Women's clothing</h1>
-        <ButtonSemiRound address='/Men' text='More' />
+        <ButtonSemiRound address={`${Url.HOME}/Men`} text='More' />
       </div>
     </div>
   )

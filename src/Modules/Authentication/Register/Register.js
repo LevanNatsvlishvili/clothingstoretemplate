@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import InputField from 'Components/InputField/InputField';
 import ButtonBlock from 'Components/Buttons/ButtonBlock';
 import Checkbox from 'Components/Switches/Checkbox';
 import clsx from 'clsx';
@@ -30,9 +29,7 @@ const Register = () => {
         <div className='mt-4  mb-3 d-flex'>
           <Checkbox label="I've agreed to the Terms of Service" />
         </div>
-        <ButtonBlock>
-          Submit
-        </ButtonBlock>
+        <ButtonBlock text='Register' />
       </form>
     </Container>
   )

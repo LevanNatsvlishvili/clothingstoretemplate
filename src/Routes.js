@@ -1,13 +1,23 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-// import { Error404Page } from 'modules/ErrorsModule';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Url from 'Paths';
 import HomePage from 'Modules/HomePage';
 import Auth from 'Modules/Authentication';
 import Catalog from 'Modules/Catalog';
 import Cart from 'Modules/Cart';
+import Checkout from 'Modules/Checkout';
+import Product from 'Modules/Product';
+
+const Redirection = () => {
+  return <Redirect to={Url.HOME} />
+}
 
 const routes = [
+  {
+    path: Url.BASE,
+    exact: true,
+    component: Redirection,
+  },
   {
     path: Url.HOME,
     exact: true,
@@ -19,14 +29,24 @@ const routes = [
     component: Auth,
   },
   {
-    path: Url.Catalog,
+    path: Url.Product,
     exact: true,
-    component: Catalog,
+    component: Product,
   },
   {
     path: Url.Cart,
     exact: true,
     component: Cart,
+  },
+  {
+    path: Url.Checkout,
+    exact: true,
+    component: Checkout,
+  },
+  {
+    path: Url.Catalog,
+    exact: true,
+    component: Catalog,
   },
 
 ];
@@ -41,17 +61,10 @@ export const RenderRoutes = (switchProps = {}) => {
             path={route.path}
             exact={route.exact}
             component={route.component}
+            redirect={route.redirect}
           />
         )
       })}
     </Switch>
   );
 };
-
-
-export const Errors = [
-  {
-    path: '*',
-    // component: Error404Page,
-  },
-];

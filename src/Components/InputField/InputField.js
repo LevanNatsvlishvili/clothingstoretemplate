@@ -5,7 +5,9 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import clsx from 'clsx';
 
 const InputField = (props) => {
-  const classes = useStyles();
+  const classes = useStyles(
+
+  );
   const { icon, placeholder, ...rest } = props;
   return (
     <InputGroup className={clsx(classes.root, {
@@ -15,7 +17,7 @@ const InputField = (props) => {
         <InputGroup.Text className={clsx(classes.iconContainer, {
           'border-0 justify-content-center p-0 mr-2': true
         })}>
-          <img src={icon} alt='icon' />
+          <img src={process.env.PUBLIC_URL + icon} alt='icon' />
         </InputGroup.Text>
       </InputGroup.Prepend> : null}
       <Form.Control
@@ -39,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   inputField: {
     backgroundColor: 'transparent!important',
     fontWeight: 700,
+    fontSize: props => props.fontSize || '16px',
     boxShadow: 'none!important',
     height: 34,
   },

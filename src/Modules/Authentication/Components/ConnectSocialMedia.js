@@ -12,7 +12,7 @@ const ConnectSocialMedia = (props) => {
         'w-100 mb-3 align-items-center  d-flex': true,
       })}
       {...rest}>
-      <img src={icon} alt="social media" />
+      <img src={process.env.PUBLIC_URL + icon} alt="social media" />
       {text}
     </Button>
   )

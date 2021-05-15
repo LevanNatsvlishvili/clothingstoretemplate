@@ -1,15 +1,16 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
 import { makeStyles } from '@material-ui/styles';
+import { Link } from 'react-router-dom';
+import Url from 'Paths';
 
 
 const NavLink = (props) => {
   const classes = useStyles();
-  const { name, linkAdress } = props;
+  const { children, linkAdress } = props;
   return (
-    <Nav.Link className={classes.link} href={linkAdress}>
-      {name}
-    </Nav.Link>
+    <Link className={classes.link} to={Url.HOME + linkAdress}>
+      {children}
+    </Link>
   )
 }
 
@@ -19,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.colors.darkGrey,
     fontSize: '18px',
     lineHeight: '28px',
+    display: 'block',
+    padding: '.5rem 1rem',
     ['@media (max-width:430px)']: {
       padding: '.5rem .5rem!important'
     }
